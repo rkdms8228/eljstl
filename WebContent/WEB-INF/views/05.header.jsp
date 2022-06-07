@@ -45,13 +45,14 @@
 			<li><a href="/mysite2/user?action=loginForm" class="btn_s">로그인</a></li>
 			<li><a href="/mysite2/user?action=joinForm" class="btn_s">회원가입</a></li>
 		</ul> 
-	</c:if><c:else> <!-- //로그인 성공 -->
+	</c:if>
+	<c:if test="${ authUser != null }"> <!-- //로그인 성공 -->
 		<ul>
 			<li>${sessionScope.authUser.name} 님 안녕하세요 ﻿คʕ•ﻌ•ʔค</li>
 			<li><a href="/mysite2/user?action=logout" class="btn_s">로그아웃</a></li>
 			<li><a href="/mysite2/user?action=modifyForm" class="btn_s">회원정보수정</a></li>
 		</ul>
-	</c:else>
+	</c:if>
    
 </div>
 
