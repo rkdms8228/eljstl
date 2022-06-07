@@ -16,6 +16,9 @@
 	
 	<%
 		UserVo userVo = (UserVo)request.getAttribute("userVo");
+	
+		int num = (int)request.getAttribute("num");
+		String str = (String)request.getAttribute("str");
 	%>
 	
 	no = <%=userVo.getNo() %> <br>
@@ -24,12 +27,28 @@
 	password = <%=userVo.getPassword() %> <br>
 	gender = <%=userVo.getGender() %> <br>
 	
+	<br><br>
+	
+	num=<%=num %> <br>
+	str=<%=str %> <br>
+	
+	<br><br>
+	
 	<h3>el</h3>
-	no = ${requestScope.userVo.no} <br>
+	
+	no = ${requestScope.userVo.no} <br> <!-- no => getNo() -->
 	name = ${requestScope.userVo.name} <br>
 	email = ${requestScope.userVo.email} <br>
 	password = ${requestScope.userVo.password} <br>
 	gender = ${requestScope.userVo.gender} <br>
+	
+	<br><br>
+	
+	num = ${requestScope.num} <br>
+	str = ${requestScope.str} <br>
+	
+	<br><br>
+
 
 </body>
 </html>
