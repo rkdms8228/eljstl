@@ -12,7 +12,7 @@
 
 	<h1>el, jstl</h1>
 	<h2>el</h2>
-	<h3>자바문법</h3>
+	<h3>자바문법 request.attribute</h3>
 	
 	<%
 		UserVo userVo = (UserVo)request.getAttribute("userVo");
@@ -46,6 +46,19 @@
 	
 	num = ${requestScope.num} <br>
 	str = ${requestScope.str} <br>
+	
+	<br><br>
+	
+	no = ${userVo.no} <br> <!-- no => getNo() -->
+	name = ${userVo.name} <br>
+	email = ${userVo.email} <br>
+	password = ${userVo.password} <br>
+	gender = ${userVo.gender} <br>
+	
+	<br><br>
+	
+	num = ${num} <br>
+	str = ${str} <br>
 	
 	<br><br>
 
