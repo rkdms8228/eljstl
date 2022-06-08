@@ -21,7 +21,7 @@ public class Servlet12 extends HttpServlet {
 		
 		HttpSession session = request.getSession(true);
 		session.setAttribute("authUser", userVo);
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/12.header.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/12.jsp");
 		rd.forward(request, response);
 
 	}
